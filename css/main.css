@@ -1,0 +1,11 @@
+body {
+	margin: 60px auto;
+	width: 70%;
+}
+
+nav ul li, footer ul li {
+	display: inline;
+}
+
+
+	
