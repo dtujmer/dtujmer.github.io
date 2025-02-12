@@ -11,28 +11,56 @@
             font-family: "Courier New", Courier, monospace;
             line-height: 1.5;
             max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
+            margin: 20px auto;
+            padding: 0 15px;
             font-size: 16px;
         }
+
         pre {
             white-space: pre-wrap;
             word-wrap: break-word;
+            overflow-x: auto;
+            margin: 0;
+            /* Ensure pre doesn't add horizontal scroll on mobile */
+            max-width: 100%;
         }
+
         a {
             color: #000000;
             text-decoration: none;
             border-bottom: 1px solid #000000;
+            word-break: break-all; /* Allow URLs to wrap */
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 600px) {
+            body {
+                margin: 10px auto;
+                padding: 0 10px;
+                font-size: 14px;
+            }
+
+            /* ASCII art container */
+            .ascii-art {
+                font-size: 10px;
+                line-height: 1.2;
+            }
+        }
+
+        /* Ensure long lines can wrap on small screens */
+        .wrap-text {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
     </style>
 </head>
 <body>
-<pre>
-===============================================================================
+<pre><div class="wrap-text">===============================================================================
                                D0M1N1K TUJM3R
-===============================================================================
+===============================================================================</div>
 
-                      ____________________________
+<div class="ascii-art">                      ____________________________
                      !\_________________________/!\
                      !!                         !! \
                      !!                         !!  \
@@ -51,16 +79,14 @@
                     /oooo  oooo  oooo  oooo /!
                    /ooooooooooooooooooooooo/ /
                   /ooooooooooooooooooooooo/ /
-                 /C=_____________________/_/
+                 /C=_____________________/_/</div>
 
 
-CONTACT & LINKS
+<div class="wrap-text">CONTACT & LINKS
 ---------------
 Email ........... : dominik.tujmer@gmail.com
 Resume .......... : <a href="dtujmer_resume.pdf">dtujmer_resume.pdf</a> 
-LinkedIn ........ : https://linkedin.com/in/dtujmer
-
-
+LinkedIn ........ : https://linkedin.com/in/dtujmer</div>
 </pre>
 </body>
 </html>
